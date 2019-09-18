@@ -1,0 +1,19 @@
+{
+    "name": "Ibooking",
+    "alias": "ibooking",
+    "description": "",
+    "keywords": [],
+    "version": "1.0.0",
+	"active": 1,
+    "order": 1,
+    "providers": [
+        "Modules\\Ibooking\\Providers\\EventServiceProvider",
+        "Modules\\Ibooking\\Providers\\IbookingServiceProvider",
+        "Modules\\Ibooking\\Providers\\RouteServiceProvider"
+    ],
+    "aliases": {},
+    "files": [
+        "helpers.php"
+    ],
+    "requires": []
+}
