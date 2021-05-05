@@ -35,10 +35,10 @@ class CreateIbookingReservationsTable extends Migration
             $table->string('plan')->default('')->nullable();
             $table->integer('plan_id')->unsigned()->nullable();
             $table->string('people')->default('')->nullable();
-            $table->text('options')->default('')->nullable();
+            $table->text('options')->nullable();
             $table->integer('coupon_id')->unsigned()->nullable();
-            $table->text('entity')->default('')->nullable();
-            $table->text('entity_id')->default('')->nullable();
+            $table->text('entity')->nullable();
+            $table->text('entity_id')->nullable();
 
             $table->timestamps();
         });

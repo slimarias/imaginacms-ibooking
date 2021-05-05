@@ -20,7 +20,7 @@ class CreateIbookingPlansTable extends Migration
             $table->foreign('event_id')->references('id')->on('ibooking__events')->onDelete('restrict');
 
             $table->tinyInteger('status')->default(0)->unsigned();
-            $table->text('options')->default('')->nullable();
+            $table->text('options')->nullable();
 
             $table->timestamps();
         });

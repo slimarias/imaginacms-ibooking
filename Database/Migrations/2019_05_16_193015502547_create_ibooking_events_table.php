@@ -18,12 +18,12 @@ class CreateIbookingEventsTable extends Migration
             // Your fields
             $table->text('place');
             $table->tinyInteger('status')->default(0)->unsigned();
-            $table->text('options')->default('')->nullable();
+            $table->text('options')->nullable();
             $table->string('duration')->default('')->nullable();
             $table->string('people')->default('')->nullable();
             $table->string('inforprice')->default('')->nullable();
-            $table->text('video')->default('')->nullable();
-            
+            $table->text('video')->nullable();
+
             $table->timestamps();
         });
     }
