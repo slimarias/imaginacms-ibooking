@@ -2,10 +2,10 @@
 
 namespace Modules\Ibooking\Transformers;
 
-use Illuminate\Http\Resources\Json\Resource;
+use Illuminate\Http\Resources\Json\JsonResource;
 use Modules\Ibooking\Transformers\EventTransformer;
 
-class PlanTransformer extends Resource
+class PlanTransformer extends JsonResource
 {
   public function toArray($request)
   {
@@ -21,8 +21,8 @@ class PlanTransformer extends Resource
       'updated_at' => $this->when($this->updated_at,$this->updated_at),
       'prices' => PriceTransformer::collection($this->whenLoaded('prices'))
     ];
-    
+
     return $item;
-    
+
   }
 }

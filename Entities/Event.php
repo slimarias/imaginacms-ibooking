@@ -2,7 +2,7 @@
 
 namespace Modules\Ibooking\Entities;
 
-use Dimsav\Translatable\Translatable;
+use Astrotomic\Translatable\Translatable;
 use Illuminate\Database\Eloquent\Model;
 use Laracasts\Presenter\PresentableTrait;
 use Modules\Ibooking\Presenters\EventPresenter;
@@ -80,10 +80,10 @@ class Event extends Model
     public function getUrlAttribute() {
 
         return \URL::route(\LaravelLocalization::getCurrentLocale() . '.ibooking.event.slug',[$this->slug]);
-        
+
     }
 
-    
+
 
 
 }

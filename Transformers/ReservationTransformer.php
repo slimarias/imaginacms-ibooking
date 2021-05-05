@@ -2,9 +2,9 @@
 
 namespace Modules\Ibooking\Transformers;
 
-use Illuminate\Http\Resources\Json\Resource;
+use Illuminate\Http\Resources\Json\JsonResource;
 
-class ReservationTransformer extends Resource
+class ReservationTransformer extends JsonResource
 {
   public function toArray($request)
   {
@@ -30,8 +30,8 @@ class ReservationTransformer extends Resource
       'created_at' => $this->when($this->created_at,$this->created_at),
       'updated_at' => $this->when($this->updated_at,$this->updated_at)
     ];
-    
+
     return $item;
-    
+
   }
 }
